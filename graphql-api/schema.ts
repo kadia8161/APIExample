@@ -8,7 +8,7 @@ export const typeDefs = gql`
   }
 
   type Query {
-    books: [Book]
+    books(title: String, author: String): [Book]
   }
 
   type Mutation {
