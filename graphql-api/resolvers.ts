@@ -22,8 +22,8 @@ export const resolvers = {
         };
       }).filter(
       (book) =>
-          (!args.title || book.title.includes(args.title)) &&
-          (!args.author || book.authorName.includes(args.author))
+          (!args.title || book.title.toLowerCase().includes(args.title.toLowerCase())) &&
+          (!args.author || book.authorName.toLowerCase().includes(args.author.toLowerCase()))
       );
       
 
